@@ -39,9 +39,9 @@ class SunSet:
     def is_day(time):
         if SunSet.get_sunrise() > time:
             return False
-        elif time < datetime.now().replace(hour=7, minute=0).timestamp():
+        elif time < datetime.fromtimestamp(time).replace(hour=7, minute=0).timestamp():
             return False
-        elif time > datetime.now().replace(hour=21,minute=0).timestamp():
+        elif time > datetime.fromtimestamp(time).replace(hour=21,minute=0).timestamp():
             return False
         elif SunSet.get_sunrise() <= time < SunSet.get_sunset():
             return True
