@@ -4,9 +4,9 @@ from gardineclass import Gardine
 from sunset import SunSet
 
 while True:
-    if SunSet.is_day():
+    if SunSet.is_day(time.time()):
         Gardine.f_auf()
-    elif not SunSet.is_day():
+    elif not SunSet.is_day(time.time()):
         Gardine.f_zu()
     else:
         Gardine.f_zu()
