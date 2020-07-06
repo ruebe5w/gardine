@@ -34,7 +34,7 @@ class SunSet:
 
         return int(matches.groups(0)[0])
 
-     @staticmethod
+    @staticmethod
     def is_day(time):
         if SunSet.get_sunrise() > time:
             return False
