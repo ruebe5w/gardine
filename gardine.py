@@ -1,6 +1,6 @@
 import time
 time.sleep(60)
-from gardineclass import Gardine
+from gardinensteuerung import Gardine
 from sunset import SunSet
 
 while True:
