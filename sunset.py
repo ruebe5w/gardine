@@ -4,7 +4,7 @@
 import re
 import requests
 import time
-import datetime
+from datetime import datetime
 
 
 class SunSet:
