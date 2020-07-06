@@ -10,4 +10,4 @@ while True:
         Gardine.f_zu()
     else:
         Gardine.f_zu()
-    time.sleep(100)
+    time.sleep(1000)
