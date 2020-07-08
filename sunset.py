@@ -37,13 +37,15 @@ class SunSet:
 
     @staticmethod
     def is_day(time):
+        bol=False
         if SunSet.get_sunrise() > time:
-            return False
-        elif time < datetime.fromtimestamp(time).replace(hour=7, minute=0).timestamp():
-            return False
-        elif time > datetime.fromtimestamp(time).replace(hour=21,minute=0).timestamp():
-            return False
-        elif SunSet.get_sunrise() <= time < SunSet.get_sunset():
-            return True
+            bol= False
+        if time < datetime.fromtimestamp(time).replace(hour=7, minute=0).timestamp():
+            bol= False
+        if time > datetime.fromtimestamp(time).replace(hour=21,minute=0).timestamp():
+            bol= False
+        if SunSet.get_sunrise() <= time < SunSet.get_sunset():
+            bol= True
         else:
-            return False
+            bol=False
+        return bol
