@@ -40,12 +40,12 @@ class SunSet:
         bol=False
         if SunSet.get_sunrise() > time:
             bol= False
+        if SunSet.get_sunrise() <= time < SunSet.get_sunset():
+            bol= True
         if time < datetime.fromtimestamp(time).replace(hour=7, minute=0).timestamp():
             bol= False
         if time > datetime.fromtimestamp(time).replace(hour=21,minute=0).timestamp():
             bol= False
-        if SunSet.get_sunrise() <= time < SunSet.get_sunset():
-            bol= True
         else:
             bol=False
         return bol
