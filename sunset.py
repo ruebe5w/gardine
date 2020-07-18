@@ -38,14 +38,19 @@ class SunSet:
     @staticmethod
     def is_day(time):
         bol=False
+        #print("R:"+str(SunSet.get_sunrise()))
+        #print("S:"+str(SunSet.get_sunset()))
+        #print("N:"+str(time))
+        sunriseFake=datetime.fromtimestamp(SunSet.get_sunrise()).replace(hour=7, minute=0).timestamp()
+        sunsetFake=datetime.fromtimestamp(SunSet.get_sunset()).replace(hour=21,minute=0).timestamp()
+        #print("FR:"+str(sunriseFake))
+        #print("FS:"+str(sunsetFake))
         if SunSet.get_sunrise() > time:
             bol= False
         if SunSet.get_sunrise() <= time < SunSet.get_sunset():
             bol= True
-        """if time < datetime.fromtimestamp(time).replace(hour=7, minute=0).timestamp():
+        if time < sunriseFake:
             bol= False
-        if time > datetime.fromtimestamp(time).replace(hour=21,minute=0).timestamp():
+        if time > sunsetFake:
             bol= False
-        else:
-            bol=False"""
         return bol

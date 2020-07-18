@@ -5,9 +5,12 @@ from sunset import SunSet
 
 while True:
     if SunSet.is_day(time.time()):
+        print("auf")
         Gardine.f_auf()
     elif not SunSet.is_day(time.time()):
+        print("zu")
         Gardine.f_zu()
     else:
+        print("zu2")
         Gardine.f_zu()
-    time.sleep(1000)
+    time.sleep(5)
