@@ -13,4 +13,4 @@ while True:
     else:
         print("zu2")
         Gardine.f_zu()
-    time.sleep(5)
+    time.sleep(960)
